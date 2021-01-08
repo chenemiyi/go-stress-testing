@@ -1,0 +1,17 @@
+https://studygolang.com/dl  下载源码包
+cd /usr/local
+# tar xf go1.15.6.linux-amd64.tar.gz
+vim /etc/profile
+export GOROOT=/usr/local/go
+export GOPATH=/home/bruce/goProject
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
+
+GOROOT设置golang的安装位置，我们解压到了/usr/local/目录，该目录下的go/文件夹一定是go的环境的根目录，就是打开go目录后别再有一个go/目录。
+
+GOBIN目录是执行 go install 后生成可执行文件的目录
+
+GOPATH是我们的工作目录，一般我们设置到用户目录下，这个要根据你电脑的实际情况去配置。在介绍一下go的工作目录结构。在我们设置的工作目录下有3个子目录
+# source /etc/profile
+# go version  查看版本信息
